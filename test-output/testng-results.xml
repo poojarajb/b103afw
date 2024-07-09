@@ -1,47 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Logout']' (tried for 7 second(s) with 500 milliseconds interval)]]>
+    </line>
+    <line>
+      <![CDATA[Homepage is NOT displayed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-07-08T22:02:54 CDT" name="Default suite" finished-at="2024-07-08T22:03:05 CDT" duration-ms="11050">
+  <suite started-at="2024-07-08T22:44:58 CDT" name="Default suite" finished-at="2024-07-08T22:45:29 CDT" duration-ms="30869">
     <groups>
     </groups>
-    <test started-at="2024-07-08T22:02:54 CDT" name="Default test" finished-at="2024-07-08T22:03:05 CDT" duration-ms="11050">
-      <class name="scripts.TC1">
-        <test-method is-config="true" signature="createReport()[pri:0, instance:scripts.TC1@75d3a5e0]" started-at="2024-07-08T22:02:54 CDT" name="createReport" finished-at="2024-07-08T22:02:54 CDT" duration-ms="412" status="PASS">
+    <test started-at="2024-07-08T22:44:58 CDT" name="Default test" finished-at="2024-07-08T22:45:29 CDT" duration-ms="30869">
+      <class name="scripts.ValidLogin">
+        <test-method is-config="true" signature="createReport()[pri:0, instance:scripts.ValidLogin@75d3a5e0]" started-at="2024-07-08T22:44:58 CDT" name="createReport" finished-at="2024-07-08T22:44:58 CDT" duration-ms="701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createReport -->
-        <test-method is-config="true" signature="preCondition(java.lang.reflect.Method)[pri:0, instance:scripts.TC1@75d3a5e0]" started-at="2024-07-08T22:02:54 CDT" name="preCondition" finished-at="2024-07-08T22:03:04 CDT" duration-ms="9498" status="PASS">
+        <test-method is-config="true" signature="preCondition(java.lang.reflect.Method)[pri:0, instance:scripts.ValidLogin@75d3a5e0]" started-at="2024-07-08T22:44:59 CDT" name="preCondition" finished-at="2024-07-08T22:45:08 CDT" duration-ms="9122" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void scripts.TC1.test1()]]>
+                <![CDATA[public void scripts.ValidLogin.testValidLogin()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="test1()[pri:0, instance:scripts.TC1@75d3a5e0]" started-at="2024-07-08T22:03:04 CDT" name="test1" finished-at="2024-07-08T22:03:05 CDT" duration-ms="1219" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:scripts.ValidLogin@75d3a5e0]" started-at="2024-07-08T22:45:08 CDT" name="testValidLogin" finished-at="2024-07-08T22:45:29 CDT" duration-ms="20827" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at scripts.ValidLogin.testValidLogin(ValidLogin.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Logout']' (tried for 7 second(s) with 500 milliseconds interval)]]>
+            </line>
+            <line>
+              <![CDATA[Homepage is NOT displayed]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:scripts.TC1@75d3a5e0]" started-at="2024-07-08T22:03:05 CDT" name="postCondition" finished-at="2024-07-08T22:03:05 CDT" duration-ms="291" status="PASS">
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:scripts.ValidLogin@75d3a5e0]" started-at="2024-07-08T22:45:29 CDT" name="postCondition" finished-at="2024-07-08T22:45:29 CDT" duration-ms="826" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=SUCCESS method=TC1.test1()[pri:0, instance:scripts.TC1@75d3a5e0] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=FAILURE method=ValidLogin.testValidLogin()[pri:1, instance:scripts.ValidLogin@75d3a5e0] output=Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Logout']' (tried for 7 second(s) with 500 milliseconds interval)]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method is-config="true" signature="publishReport()[pri:0, instance:scripts.TC1@75d3a5e0]" started-at="2024-07-08T22:03:05 CDT" name="publishReport" finished-at="2024-07-08T22:03:06 CDT" duration-ms="321" status="PASS">
+        <test-method is-config="true" signature="publishReport()[pri:0, instance:scripts.ValidLogin@75d3a5e0]" started-at="2024-07-08T22:45:29 CDT" name="publishReport" finished-at="2024-07-08T22:45:31 CDT" duration-ms="1356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishReport -->
-      </class> <!-- scripts.TC1 -->
+      </class> <!-- scripts.ValidLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
